@@ -1,3 +1,2 @@
 # AplikacjaPogodowa
 Aplikacja Pogodowa - JavaFX
-<br>W trakcie tworzenia...
