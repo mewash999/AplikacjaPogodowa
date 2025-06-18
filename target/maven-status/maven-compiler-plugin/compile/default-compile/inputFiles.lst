@@ -1,0 +1,11 @@
+C:\Users\Admin\IdeaProjects\AplikacjaPogodowa\src\main\java\module-info.java
+C:\Users\Admin\IdeaProjects\AplikacjaPogodowa\src\main\java\pl\pogodynka\aplikacjapogodowa\HelloApplication.java
+C:\Users\Admin\IdeaProjects\AplikacjaPogodowa\src\main\java\pl\pogodynka\aplikacjapogodowa\MainController.java
+C:\Users\Admin\IdeaProjects\AplikacjaPogodowa\src\main\java\pl\pogodynka\aplikacjapogodowa\model\CacheEntry.java
+C:\Users\Admin\IdeaProjects\AplikacjaPogodowa\src\main\java\pl\pogodynka\aplikacjapogodowa\model\DailyData.java
+C:\Users\Admin\IdeaProjects\AplikacjaPogodowa\src\main\java\pl\pogodynka\aplikacjapogodowa\model\DailyDataDeserializer.java
+C:\Users\Admin\IdeaProjects\AplikacjaPogodowa\src\main\java\pl\pogodynka\aplikacjapogodowa\model\GeocodingResponse.java
+C:\Users\Admin\IdeaProjects\AplikacjaPogodowa\src\main\java\pl\pogodynka\aplikacjapogodowa\model\HourlyData.java
+C:\Users\Admin\IdeaProjects\AplikacjaPogodowa\src\main\java\pl\pogodynka\aplikacjapogodowa\model\HourlyDataDeserializer.java
+C:\Users\Admin\IdeaProjects\AplikacjaPogodowa\src\main\java\pl\pogodynka\aplikacjapogodowa\model\Location.java
+C:\Users\Admin\IdeaProjects\AplikacjaPogodowa\src\main\java\pl\pogodynka\aplikacjapogodowa\model\OpenMeteoResponse.java

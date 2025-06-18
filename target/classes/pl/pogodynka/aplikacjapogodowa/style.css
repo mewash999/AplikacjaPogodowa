@@ -1,0 +1,158 @@
+.root {
+    -fx-background-color: #FAFAFA;
+    -fx-font-family: "Tahoma";
+    -fx-font-size: 13px;
+}
+
+.text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 8px 4px;
+    -fx-text-alignment: center;
+    -fx-text-fill: #333333;
+    -fx-prompt-text-fill: #666666;
+}
+
+.text-field.error {
+    -fx-border-color: #FF3B30;
+    -fx-border-width: 0 0 2 0;
+}
+
+.date-picker .text-field {
+    -fx-text-alignment: center;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #E0E0E0;
+}
+
+.date-picker.error .text-field {
+    -fx-border-color: #FF3B30;
+    -fx-border-width: 0 0 2 0;
+}
+
+.label {
+    -fx-text-fill: #333333;
+    -fx-font-size: 13px;
+    -fx-alignment: center;
+    -fx-padding: 4px 0;
+}
+
+.label.bold {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+.label.error-message {
+    -fx-text-fill: #FF3B30;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+.label.status-message {
+    -fx-text-fill: #33a549;
+    -fx-alignment: center;
+}
+
+.check-box {
+    -fx-text-fill: #333333;
+    -fx-font-size: 13px;
+    -fx-padding: 0 10px;
+    -fx-alignment: center;
+}
+
+.button {
+    -fx-background-color: #1A73E8;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 13px;
+    -fx-padding: 8px 20px;
+    -fx-border-width: 0;
+    -fx-alignment: center;
+    -fx-cursor: hand;
+    -fx-transition: -fx-background-color 0.2s ease-in-out;
+}
+
+.button:disabled {
+    -fx-background-color: #E0E0E0;
+    -fx-text-fill: #999999;
+}
+
+#forecastResultsBox, #historicalResultsBox {
+    -fx-padding: 12px;
+    -fx-alignment: center;
+}
+
+.radio-button {
+    -fx-text-fill: #333333;
+    -fx-font-size: 13px;
+    -fx-padding: 6px 0;
+    -fx-alignment: center;
+}
+
+.vbox, .hbox {
+    -fx-alignment: center;
+}
+
+#checkboxContainer {
+    -fx-alignment: center;
+    -fx-padding: 12px 0;
+    -fx-wrap-text: true;
+}
+
+#coordsInputContainer .text-field {
+    -fx-pref-width: 100px;
+}
+
+.date-picker:focused,
+.date-picker > .text-field:focused {
+        -fx-focus-color: transparent;
+        -fx-background-insets: 2;
+    }
+
+.date-picker > .arrow-button {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #CCCCCC;
+    -fx-border-width: 1;
+}
+
+.date-picker > .arrow-button:hover {
+    -fx-background-color: #F5F5F5;
+}
+
+.date-picker > .arrow-button > .arrow {
+    -fx-background-color: #333333;
+}
+
+.date-picker-popup .spinner .button {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #CCCCCC;
+    -fx-border-width: 1;
+}
+
+.date-picker-popup .spinner .button:hover {
+    -fx-background-color: #F5F5F5;
+}
+
+.date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {
+    -fx-background-color: #333333;
+}
+
+.check-box:focused .box {
+    -fx-border-color: #b8b8b8;
+    -fx-background-insets: 0;
+}
+
+.check-box:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.check-box .box,
+.check-box:hover .box,
+.check-box:pressed .box,
+.check-box:focused .box {
+    -fx-background-insets: 0;
+    -fx-border-width: 1;
+    -fx-border-color: #b8b8b8;
+}

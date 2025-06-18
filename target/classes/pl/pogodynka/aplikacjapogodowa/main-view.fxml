@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.pogodynka.aplikacjapogodowa.MainController">
+    <VBox spacing="20.0" alignment="CENTER" stylesheets="@style.css">
+        <padding>
+            <Insets top="30" bottom="20" left="20" right="20" />
+        </padding>
+
+        <HBox spacing="10.0" alignment="CENTER">
+            <Label text="Wybierz metodę lokalizacji:" style="-fx-font-weight: bold;" />
+            <RadioButton fx:id="cityRadio" text="Miasto" selected="true">
+                <toggleGroup>
+                    <ToggleGroup fx:id="locationMethodToggle" />
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="coordsRadio" text="Współrzędne" toggleGroup="$locationMethodToggle" />
+        </HBox>
+
+        <VBox fx:id="cityInputContainer" spacing="10.0" alignment="CENTER">
+            <HBox spacing="10" alignment="CENTER">
+                <Label text="Nazwa miasta:" />
+                <TextField fx:id="cityInputField" promptText="np. Warszawa" maxWidth="120"/>
+            </HBox>
+        </VBox>
+
+        <HBox fx:id="coordsInputContainer" spacing="10.0" visible="false" managed="false" alignment="CENTER">
+            <VBox spacing="5.0">
+                <HBox spacing="10" alignment="CENTER">
+                    <Label text="Szerokość:" />
+                    <TextField fx:id="latInputField" promptText="np. 52.23" maxWidth="70"/>
+                </HBox>
+            </VBox>
+            <VBox spacing="5.0">
+                <HBox spacing="10" alignment="CENTER">
+                    <Label text="Długość:" />
+                    <TextField fx:id="lonInputField" promptText="np. 21.02" maxWidth="70"/>
+                </HBox>
+            </VBox>
+        </HBox>
+
+        <HBox spacing="10.0" alignment="CENTER">
+            <Label text="Wybierz typ danych:" style="-fx-font-weight: bold;" />
+            <RadioButton fx:id="forecastRadio" text="Prognoza" selected="true">
+                <toggleGroup>
+                    <ToggleGroup fx:id="dataTypeToggle" />
+                </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="historicalRadio" text="Dane historyczne" toggleGroup="$dataTypeToggle" />
+        </HBox>
+
+        <HBox fx:id="dateRangeContainer" spacing="10.0" visible="false" managed="false" alignment="CENTER">
+            <VBox spacing="5.0">
+                <HBox spacing="10" alignment="CENTER">
+                    <Label text="Początek:" />
+                    <DatePicker fx:id="startDatePicker" maxWidth="100"/>
+                </HBox>
+            </VBox>
+            <VBox spacing="5.0">
+                <HBox spacing="10" alignment="CENTER">
+                    <Label text="Koniec:" />
+                    <DatePicker fx:id="endDatePicker" maxWidth="100"/>
+                </HBox>
+            </VBox>
+        </HBox>
+
+        <VBox fx:id="checkboxContainer" spacing="10.0" alignment="CENTER">
+            <Label text="Wybierz zmienne pogodowe:" style="-fx-font-weight: bold;" />
+            <HBox alignment="CENTER">
+                <VBox spacing="10" alignment="CENTER_LEFT">
+                    <CheckBox fx:id="temp2mCheckbox" text="Temperatura powietrza" />
+                    <CheckBox fx:id="windspeedCheckbox" text="Prędkość wiatru" />
+                    <CheckBox fx:id="rainCheckbox" text="Opady deszczu" />
+                    <CheckBox fx:id="soilTempCheckbox" text="Temperatura gleby" />
+                    <CheckBox fx:id="surfacePressureCheckbox" text="Ciśnienie atmosferyczne" />
+                </VBox>
+            </HBox>
+        </VBox>
+
+        <HBox spacing="10" alignment="CENTER">
+            <Button fx:id="fetchDataButton" text="Pobierz dane" onAction="#fetchData" alignment="CENTER" />
+        </HBox>
+
+        <Label fx:id="statusLabel" text="Wprowadź dane i naciśnij Pobierz dane." styleClass="status-message" wrapText="true" />
+
+        <VBox fx:id="forecastResultsBox" visible="false" managed="false" spacing="10" alignment="CENTER">
+            <HBox spacing="10" alignment="CENTER">
+                <Button fx:id="forecastShowChartButton" text="Pokaż wykres" onAction="#showChart" />
+                <Button fx:id="forecastExportButton" text="Eksportuj dane" onAction="#exportChartData" />
+            </HBox>
+        </VBox>
+
+        <VBox fx:id="historicalResultsBox" visible="false" managed="false" spacing="10" alignment="CENTER">
+            <HBox spacing="10" alignment="CENTER">
+                <Button fx:id="historicalShowChartButton" text="Pokaż wykres" onAction="#showChart" />
+                <Button fx:id="historicalExportButton" text="Eksportuj dane" onAction="#exportChartData" />
+            </HBox>
+        </VBox>
+    </VBox>
+</StackPane>
